@@ -1,4 +1,6 @@
-export function solution(instructions: string) {
+import { Solutions } from '../models/Solutions';
+
+function solution(instructions: string) {
     let facing = 0;
     let position = [0, 0];
     const movements = [[0, 1], [1, 0], [0, -1], [-1, 0]];
@@ -21,3 +23,5 @@ export function solution(instructions: string) {
 
     return position[0] === 0 && position[1] === 0;
 }
+
+export default { solution } as Solutions;

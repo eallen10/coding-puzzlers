@@ -4,7 +4,8 @@
   "description": "A place to view, solve, and run common coding puzzles",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "add:new:puzzle": "ts-node scripts/addNewPuzzle/addNewPuzzle.ts"
   },
   "repository": {
     "type": "git",

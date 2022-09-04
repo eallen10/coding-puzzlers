@@ -1,15 +1,15 @@
-import { solution } from './solution';
+import solutions from './solutions';
 
-describe('roman numeral to number', () => {
-    it('returns 3 when passed III', () => {
-        expect(solution('III')).toBe(3);
+describe.each(Object.keys(solutions))('roman-numeral-to-number', (n) => {
+    it(`${n} returns 3 when passed III`, () => {
+        expect(solutions.solution('III')).toBe(3);
     });
 
-    it('returns 58 when passed LVIII', () => {
-        expect(solution('LVIII')).toBe(58);
+    it(`${n} returns 58 when passed LVIII`, () => {
+        expect(solutions.solution('LVIII')).toBe(58);
     });
 
-    it('returns 1994 when passed MCMXCIV', () => {
-        expect(solution('MCMXCIV')).toBe(1994);
+    it(`${n} returns 1994 when passed MCMXCIV`, () => {
+        expect(solutions.solution('MCMXCIV')).toBe(1994);
     });
 });
