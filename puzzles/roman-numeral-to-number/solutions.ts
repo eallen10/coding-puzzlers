@@ -1,4 +1,6 @@
-export function solution(romanNumeral: string) {
+import { Solutions } from '../models/Solutions';
+
+function solution(romanNumeral: string) {
     const rnMap: any = {
         'I': 1,
         'V': 5,
@@ -31,3 +33,5 @@ export function solution(romanNumeral: string) {
 
     return runningTotal;
 }
+
+export default { solution } as Solutions;

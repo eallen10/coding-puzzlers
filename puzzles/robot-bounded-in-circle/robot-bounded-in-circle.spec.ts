@@ -1,31 +1,31 @@
-import { solution } from './solution';
+import solutions from './solutions';
 
-describe('bounded robot in circle', () => {
-    it('returns true empty input', () => {
-        expect(solution('GGLLGG')).toBe(true);
+describe.each(Object.keys(solutions))('robot-bounded-in-circle', (n) => {
+    it(`${n} returns true empty input`, () => {
+        expect(solutions.solution('GGLLGG')).toBe(true);
     });
 
-    it('returns false when passed G', () => {
-        expect(solution('G')).toBe(false);
+    it(`${n} returns false when passed G`, () => {
+        expect(solutions.solution('G')).toBe(false);
     });
 
-    it('returns false when passed GLLGRRLG', () => {
-        expect(solution('G')).toBe(false);
+    it(`${n} returns false when passed GLLGRRLG`, () => {
+        expect(solutions.solution('G')).toBe(false);
     });
 
-    it('returns true when passed GGLLGG', () => {
-        expect(solution('GGLLGG')).toBe(true);
+    it(`${n} returns true when passed GGLLGG`, () => {
+        expect(solutions.solution('GGLLGG')).toBe(true);
     });
 
-    it('returns true when passed GGLLGGRRRRGGRRGG', () => {
-        expect(solution('GGLLGGRRRRGGRRGG')).toBe(true);
+    it(`${n} returns true when passed GGLLGGRRRRGGRRGG`, () => {
+        expect(solutions.solution('GGLLGGRRRRGGRRGG')).toBe(true);
     });
 
-    it('returns true when passed LLLLLLL', () => {
-        expect(solution('LLLLLLL')).toBe(true);
+    it(`${n} returns true when passed LLLLLLL`, () => {
+        expect(solutions.solution('LLLLLLL')).toBe(true);
     });
 
-    it('returns true when passed LRLRLRRRLLRL', () => {
-        expect(solution('LRLRLRRRLLRL')).toBe(true);
+    it(`${n} returns true when passed LRLRLRRRLLRL`, () => {
+        expect(solutions.solution('LRLRLRRRLLRL')).toBe(true);
     });
 });

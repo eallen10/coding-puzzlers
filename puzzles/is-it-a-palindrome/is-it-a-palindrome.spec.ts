@@ -1,19 +1,19 @@
-import { solution } from './solution';
+import solutions from './solutions';
 
-describe('is it a palindrome', () => {
-    it('returns true when given [1,2,2,1]', () => {
-        expect(solution([1,2,2,1])).toBe(true);
+describe.each(Object.keys(solutions))('is-it-a-palindrome', (n) => {
+    it(`${n} returns true when given [1,2,2,1]`, () => {
+        expect(solutions[n]([1,2,2,1])).toBe(true);
     });
 
-    it('returns true when given [1,2,3,2,1]', () => {
-        expect(solution([1,2,3,2,1])).toBe(true);
+    it(`${n} returns true when given [1,2,3,2,1]`, () => {
+        expect(solutions[n]([1,2,3,2,1])).toBe(true);
     });
 
-    it('returns false when given [0,1]', () => {
-        expect(solution([0,1])).toBe(false);
+    it(`${n} returns false when given [0,1]`, () => {
+        expect(solutions[n]([0,1])).toBe(false);
     });
 
-    it('returns false when given [0,1,1]', () => {
-        expect(solution([0,1])).toBe(false);
+    it(`${n} returns false when given [0,1,1]`, () => {
+        expect(solutions[n]([0,1])).toBe(false);
     });
 });

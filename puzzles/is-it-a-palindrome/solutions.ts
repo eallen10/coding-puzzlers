@@ -1,3 +1,5 @@
+import { Solutions } from '../models/Solutions';
+
 function solution(sequence: number[]) {
     for(let i = 0; i < sequence.length; i++) {
         const mirrorIndex = sequence.length - i - 1;
@@ -9,4 +11,4 @@ function solution(sequence: number[]) {
     }
 }
 
-export { solution }
+export default { solution } as Solutions;

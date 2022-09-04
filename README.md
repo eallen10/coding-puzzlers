@@ -12,8 +12,18 @@ A place to view, solve, and run common coding puzzles.
 ### Install
 `npm i`
 
-### Run All Problems
+### Run All Puzzles
 `npm run test`
 
-### Run Specific Problem
-`npm run test -- -i '<path_to_problem_spec>`
+### Run Specific Puzzle
+`npm run test -- -i '<path_to_puzzle_spec>`
+
+## Add New Puzzle
+To add a new puzzle with default template files, run:  
+
+`npm run add:new:puzzle <new_puzzle_name>`  
+
+This will create a new puzzle folder and the following template files:
+- `puzzle.md` - the description of your new puzzle
+- `solutions.ts` - a file to store solutions to your puzzle
+- `<new_puzzle_name>.spec.ts` - a spec file to hold your puzzle tests
