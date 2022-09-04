@@ -28,7 +28,6 @@ function efficientMapSolution(nums: number[], target: number) {
     for(let i = 0; i < nums.length; i++) {
         const compliment = target - nums[i]; // 7, 2
         const foundComplimentIndex = numsMap.get(compliment); // -, 0
-        console.log(compliment, foundComplimentIndex)
         if(Number.isInteger(foundComplimentIndex)) return [foundComplimentIndex, i];
 
         numsMap.set(nums[i], i);
