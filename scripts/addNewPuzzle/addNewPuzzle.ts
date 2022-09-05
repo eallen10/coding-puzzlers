@@ -13,7 +13,7 @@ const template: PuzzleTemplate = {
         },
         {
             name: '<puzzle_name>.spec.ts',
-            startingText: `import solutions from './solutions';\r\n\r\ndescribe.each(Object.keys(solutions))('<puzzle_name>', (n) => {\r\n    it(\`\${n} add test description!\`, () => {\r\n        expect(solutions[n]()).toBe(undefined);\r\n    });\r\n});`
+            startingText: `import solutions from './solutions';\r\n\r\ndescribe.each(Object.keys(solutions))('<puzzle_name>', (n) => {\r\n    it(\`\${n} add test description!\`, () => {\r\n        expect(solutions[n]()).toBeUndefined();\r\n    });\r\n});`
         }
     ]
 };
